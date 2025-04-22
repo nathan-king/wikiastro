@@ -12,7 +12,6 @@ export default function Navbar({ pages }) {
   const navRef = useRef(null);
   const toggleRef = useRef(null);
 
-  // Close mobile menu when clicking outside
   const handleClickOutside = useCallback((e) => {
     if (
       navRef.current &&
@@ -31,13 +30,17 @@ export default function Navbar({ pages }) {
     }
   }, [open, handleClickOutside]);
 
+  // Clone and sort pages by slug
+  const sortedPages = [...pages].sort((a, b) =>
+    a.slug.localeCompare(b.slug)
+  );
+
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
         {/* Brand/logo */}
         <a href="/" className={styles.brand}>
           <picture>
-            {/* stacked logo on small screens */}
             <source srcSet={lightLogoStacked} media="(max-width: 768px)" />
             <img
               src={lightLogo}
@@ -55,7 +58,7 @@ export default function Navbar({ pages }) {
           aria-label="Toggle theme"
         >
           <Moon size={24} weight="bold" className={styles.iconLight} />
-          <Sun  size={24} weight="bold" className={styles.iconDark}  />
+          <Sun  size={24} weight="bold" className={styles.iconDark} />
         </button>
 
         {/* Mobile menu toggle (burger → X) */}
@@ -75,27 +78,39 @@ export default function Navbar({ pages }) {
           ref={navRef}
           className={`${styles.navList} ${open ? styles.open : ''}`}
         >
-          {pages.map(page => (
-            <li key={page.slug} className={styles.navItemWrapper}>
-              <a
-                href={`/${page.slug}`}
-                className={`${styles.navItem} ${page.children?.length ? styles.hasChildren : ''}`}
-              >
-                {page.title}
-              </a>
-              {page.children?.length > 0 && (
-                <ul className={styles.dropdown}>
-                  {page.children.map(child => (
-                    <li key={child.slug}>
-                      <a href={`/${child.slug}`} className={styles.navItem}>
-                        {child.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
+          {sortedPages.map(page => {
+            // Also sort any children
+            const sortedChildren = page.children
+              ? [...page.children].sort((a, b) =>
+                  a.slug.localeCompare(b.slug)
+                )
+              : [];
+
+            return (
+              <li key={page.slug} className={styles.navItemWrapper}>
+                <a
+                  href={`/${page.slug}`}
+                  className={`${styles.navItem} ${
+                    page.children?.length ? styles.hasChildren : ''
+                  }`}
+                >
+                  {page.title}
+                </a>
+                {sortedChildren.length > 0 && (
+                  <ul className={styles.dropdown}>
+                    {sortedChildren.map(child => (
+                      <li key={child.slug}>
+                        <a href={`/${child.slug}`} className={styles.navItem}>
+                          {child.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
+
           <li className={styles.navItemWrapper}>
             <a href="/library" className={styles.navItem}>
               The Library
