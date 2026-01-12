@@ -1,55 +1,22 @@
 ---
-title: About Us
-summary: Discover the vision, ethos, and practical spirituality of The Encosmic Path, a modern animistic community.
+title: About This Site
 ---
 
-Welcome to **The Encosmic Path**—a warm, vibrant spiritual community dedicated to reconnecting deeply and meaningfully with the sacred elements of everyday life. "Encosmic" means "in the world," and that's exactly how our spirituality is meant to feel—alive, practical, and beautifully present in every moment, whether it's honouring the wind, feeling the solidity of stone, or simply appreciating the warmth of firelight in our homes.
+This site is a simple, multi-page wiki: a place to collect notes, definitions, references, and “how-to” pages in a structure that’s easy to browse.
 
-## Our Vision & Goals
+## What You’ll Find Here
 
-Our mission is to create a living tradition that reconnects people with humanity's ancient animistic roots, guided thoughtfully by modern insights and respectful innovation. We draw inspiration from diverse traditions, ancient and contemporary, but we carefully avoid appropriating living cultural practices. Instead, we thoughtfully use symbols and language—both ancient and new—to craft a spirituality that resonates today.
+- **Pages**: evergreen content like “About”, “Getting Started”, and conventions.
+- **Library**: the main wiki area, grouped by category and cross-linked.
 
-| Aim                     | Meaning                                                      |
-| ----------------------- | ------------------------------------------------------------ |
-| **Engage with nature**  | Connect gently yet deeply with nature through simple, everyday practices |
-| **Evolving identity**   | Foster a flexible spiritual path that welcomes personal insights and adapts to cultural shifts |
-| **Meaningful practice** | Offer simple, accessible rituals and reflections that genuinely enhance daily life |
-| **Holistic well-being** | Nurture personal flourishing alongside communal and planetary well-being |
+If you’re new, start with [Getting Started](/beliefs), then browse the [Library](/library).
 
-Everyone can begin easily—no special knowledge or experience required.
+## How It’s Organized
 
-## Principles in Practice
+- Keep topics small and link out to deeper pages.
+- Prefer clear titles (“X Overview”, “X Checklist”, “X Reference”) over clever naming.
+- Add “See also” links at the bottom of pages to make exploration easy.
 
-| Principle               | In practice                                                  |
-| ----------------------- | ------------------------------------------------------------ |
-| **Awe and Inquiry**     | Embrace wonder guided by curiosity and thoughtful reflection |
-| **Beyond Superstition** | Balance spiritual openness with reason and clear thinking    |
-| **Modern Relevance**    | Use rituals and symbols that truly resonate in contemporary life |
-| **Practical Impact**    | Encourage resilience, ethical living, and environmental care |
+## Status
 
-## Respect for All Traditions
-
-Inclusivity and deep respect guide our approach, helping us honour the richness of global animistic practices while carefully avoiding cultural appropriation.
-
-| Commitment                       | Action                                                       |
-| -------------------------------- | ------------------------------------------------------------ |
-| **Avoid Cultural Appropriation** | Learn respectfully without adopting or appropriating sacred practices of Indigenous traditions |
-| **Celebrate Diversity**          | Understand animism as humanity’s shared heritage, expressed uniquely and beautifully across diverse cultures |
-
-## Our Community Ethos
-
-Our community is rooted in values that foster meaningful connections and personal growth:
-
-- **Ongoing Learning**: Engaging continuously in dialogue, thoughtful reflection, and practical experience.
-- **Reciprocity**: Caring actively and mindfully for oneself, others, and the planet.
-- **Accountability**: Committing clearly and transparently to shared ethical standards and community integrity.
-
-## The Path Forward
-
-The Encosmic Path isn't about replicating the past—it's about joyfully shaping a new tradition for today's world that:
-
-- Connects authentically and meaningfully with the living, breathing world around us.
-- Harmonizes deep cosmic mystery with clear, everyday practicality.
-- Thrives on ethical values, genuine community bonds, and continual personal and collective growth.
-
-Explore our [library](/library) to delve deeper into our beliefs, practices, and resources. Join us on this mindful journey where reverence meets rationality, tradition remains vibrant, and spirituality is beautifully and genuinely **encosmic**.
+This wiki is intentionally minimal and evolves over time. If something is unclear, add a short note and link to a new page rather than trying to perfect it all at once.

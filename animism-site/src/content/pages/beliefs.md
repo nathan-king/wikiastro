@@ -1,29 +1,35 @@
 ---
-title: Beliefs
+title: Getting Started
 ---
 
-Our animistic tradition is built on the understanding that the universe is alive—full of spirits that animate every stone, tree, gust of wind, creature, and star. We believe the sacred is not distant or abstract but present in every aspect of the world around us and within us.
+This is a plain wiki with a simple goal: help you find information quickly and keep it easy to maintain.
 
-## What Are Spirits?
+## Navigation
 
-Spirits are the living presences within nature, memory, wind, fire, imagination, and matter. They are not metaphors or distant gods, but the **forces and qualities of the world itself**—alive and in **relationship** with us. When we speak of spirits, we mean the active energy behind rivers and seasons, the feeling in an ancient tree, the presence of an ancestor, or the brilliance of clarity at dawn.
+- Use the top navigation for the main pages.
+- Use the [Library](/library) for wiki articles grouped by category.
+- Use the search in your browser (or your editor) if you’re working locally.
 
-They are the ways reality expresses itself in vivid, personal form.
+## Recommended Structure
 
-We do not worship or manipulate them—we honour and engage with them. Our practice is not about devotion, but **reverent relationship**. Through ritual, reflection, and presence, we seek to enter into a living dialogue with the world.
+When you add new entries, aim for one of these formats:
 
-## The Living Web of Spirits
+- **Overview**: a short definition + key points + links out.
+- **How-to**: steps, prerequisites, examples, and pitfalls.
+- **Reference**: tables, lists, parameters, or canonical details.
+- **Glossary**: terms and synonyms.
 
-Spirits exist in overlapping layers of being—from intimate, local presences to the great shaping forces of the cosmos. We recognise many kinds of spirits:
+## Writing Guidelines
 
-- **Great Spirits**: Archetypal forces that shape existence itself
-- **Local Spirits**: Guardians of landforms, rivers, cities, and weather
-- **Ancestral Spirits**: Lineages of the past that still shape our identity
-- **Creative Spirits**: Forces of inspiration, innovation, and transformation
+- Lead with the simplest explanation that works.
+- Prefer bullets, short sections, and descriptive headings.
+- Link related topics instead of repeating content.
+- If something is incomplete, add a “TODO” section and move on.
 
-These distinctions are not rigid. We recognise that what we name as a single spirit may appear differently in other traditions. For instance, a mountain spirit in our system may be honoured as a kami in Japan. We do not claim to be the only path—only that this is the one we walk.
+## Next Steps
 
-We believe it is possible to respectfully honour spirits in other cultures as long as we do so **within their tradition**, not by blending or borrowing without care. For example, we may respectfully visit a Shinto shrine in Japan to honour the kami there, recognising the same kind of presence we acknowledge within our own practice. Spiritual truth exists in many forms.
+- Browse the [Library](/library).
+- Read [Editing & Conventions](/practices) before making larger changes.
 
 ## Foundations of Our Cosmology
 

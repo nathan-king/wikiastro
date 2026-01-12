@@ -1,67 +1,33 @@
 ---
-title: Practices
+title: Editing & Conventions
 ---
 
-In this tradition, practice is how we bring belief into relationship with the world. It is how we engage the spirits, tend the sacred, and walk with intention. Practices are not rules but rhythms—ways of aligning our lives with the living presence of the world around us.
+This page describes lightweight conventions for adding and maintaining wiki entries. The goal is consistency without making writing feel heavy.
 
-Practice in this tradition is grounded in three principles:
+## Page Template
 
-- **Embodiment**: We engage the sacred through the body, the land, and the material world.
-- **Relationship**: Practice exists to foster connection—with spirits, places, ancestors, and the sacred order of things.
-- **Reciprocity**: We do not take without giving, speak without listening, or act without care.
+Most pages work well with this structure:
 
+- **Summary**: 1–3 sentences describing what the page is.
+- **Details**: bullets, tables, or short paragraphs.
+- **Examples** (optional): a concrete example or two.
+- **See also**: links to related pages.
 
-## Daily Acts of Reverence
+## Naming
 
-Practice is not limited to formal ritual. It includes small, meaningful acts that cultivate presence:
+- Use clear titles (“Caching Overview”, “Writing Checklist”, “API Reference”).
+- Avoid internal jargon unless you define it on the page.
 
-- Lighting a candle at a home shrine  
-- Offering a flower, a feather, or water  
-- Greeting a tree, stone, or wind  
-- Standing in silence at sunrise  
+## Linking
 
-These simple gestures anchor us in relationship. They are acts of attention.
+- Add links when you reference another concept that has (or should have) its own page.
+- Prefer one canonical page per topic; link to it rather than duplicating.
 
+## Categories & Tags
 
-## Ritual and Season
+Library entries support categories and optional tags. Prefer a small set of stable categories and use tags for finer grouping.
 
-We honor the cycles of life, light, and land. Seasonal rituals mark the turn of time and connect us to place:
+## Maintenance
 
-- Planting and harvest  
-- Solstices and equinoxes  
-- Local festivals and ancestral days  
-
-These observances may be private, communal, or adapted to local climate and ecology. What matters is not perfection, but participation.
-
-
-## Offerings and Gratitude
-
-We offer not to appease but to participate. Offerings are acts of recognition, gratitude, and care. They may include:
-
-- Natural food, water, or wine  
-- Smoke or scent  
-- Song or word  
-- Work, craft, or time  
-
-Offerings are not bribes. They are ways of being in right relationship.
-
-
-## Stewardship and Tending
-
-To care for a place is to enter into relationship with its spirit. Acts of stewardship—gardening, cleaning, protecting, restoring—are as sacred as words of prayer.
-
-Tending is a core form of spiritual practice. It includes both care for shrines and care for the world beyond them.
-
-
-## The Role of Silence
-
-Silence is not emptiness. It is space for listening.
-
-A practice of silence allows us to hear the subtle, the small, and the sacred. It teaches humility and opens us to presence.
-
-
-## A Living Path
-
-Practice is not something we master once. It is a path we walk, again and again.
-
-Each act of reverence, each moment of care, is a step toward deeper presence. This is not a religion of control or demand. It is a tradition of relationship, of returning, and of living in the world as if it were sacred—because it is.
+- If you change page titles, check for broken links.
+- If you rename or merge pages, leave a short note in the destination page so readers understand what happened.
