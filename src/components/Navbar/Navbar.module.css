@@ -22,25 +22,22 @@
 /* Brand/logo link */
 .brand {
   margin-right: auto;
+  text-decoration: none;
 }
 
-/* Logo image */
-.brandImage {
-  display: block;
-  height: 1.2rem;
-  transition: filter var(--transition-duration) var(--transition-ease);
+/* Text watermark */
+.brandText {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  font-size: 1.05rem;
+  color: var(--foreground-strong);
+  opacity: 0.72;
 }
 
-/* make stacked logo bigger on mobile */
-@media (max-width: 768px) {
-  .brandImage {
-    height: 3rem;
-  }
-}
-
-/* Invert the logo in dark mode */
-:global(html[data-theme="dark"]) .brandImage {
-  filter: invert(1) brightness(1.2);
+.brand:hover .brandText {
+  opacity: 0.9;
 }
 
 /* Mobile‑only hamburger toggle container */

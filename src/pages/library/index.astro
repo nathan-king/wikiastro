@@ -48,7 +48,6 @@ const categoryDescriptions = {
       <div class={styles.categoryCard}>
         <div class={styles.categoryHeader}>
           <h2 id={`category-${slugify(category)}`}>{category}</h2>
-          <span class={styles.categoryCount}>{grouped[category].length}</span>
         </div>
         {categoryDescriptions[category] && (
           <p class={styles.categoryDescription}>{categoryDescriptions[category]}</p>

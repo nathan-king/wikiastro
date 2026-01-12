@@ -8,7 +8,7 @@ Each library entry has frontmatter (the YAML block at the top) that controls how
 
 ## Supported Fields
 
-These are defined in `animism-site/src/content/config.ts`.
+These are defined in `src/content/config.ts`.
 
 | Field | Type | Required | Purpose |
 |------|------|----------|---------|

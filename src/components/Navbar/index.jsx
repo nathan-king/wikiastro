@@ -2,8 +2,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import useTheme from '../../hooks/useTheme';
 import styles from './Navbar.module.css';
-import lightLogo        from '../../assets/brand-light.svg?url';
-import lightLogoStacked from '../../assets/brand-light-stacked.svg?url';
 import { Sun, Moon }    from 'phosphor-react';
 
 export default function Navbar({ pages }) {
@@ -56,17 +54,11 @@ export default function Navbar({ pages }) {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        {/* Brand/logo */}
+        {/* Brand */}
         <a href="/" className={styles.brand}>
-          <picture>
-            <source srcSet={lightLogoStacked} media="(max-width: 768px)" />
-            <img
-              src={lightLogo}
-              alt="The Encosmic Path"
-              className={styles.brandImage}
-              loading="eager"
-            />
-          </picture>
+          <span className={styles.brandText} aria-label="WikiAstro">
+            WikiAstro
+          </span>
         </a>
 
         {/* Theme toggle */}
