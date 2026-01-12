@@ -33,10 +33,33 @@
   /* fill the grid cell */
 }
 
+.categoryHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
 .categoryCard h2 {
   margin-top: 0;
   font-size: 1.5rem;
   color: var(--foreground-strong);
+}
+
+.categoryCount {
+  font-size: 0.9rem;
+  color: var(--foreground-strong);
+  background: color-mix(in srgb, var(--background) 65%, transparent);
+  border: 1px solid var(--nav-border-color);
+  border-radius: 999px;
+  padding: 0.1rem 0.5rem;
+}
+
+.categoryDescription {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 .categoryCard ul {
@@ -58,6 +81,78 @@
   max-width: 75ch;
   margin: 0 auto;
   line-height: 1.75;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.crumbSep {
+  opacity: 0.6;
+}
+
+.crumbCurrent {
+  color: var(--foreground-strong);
+}
+
+.pageMeta {
+  margin: 0 0 0.75rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--foreground-strong);
+  background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  box-shadow: inset 0 0 0 1px var(--nav-border-color);
+}
+
+.related {
+  margin-top: 2.5rem;
+}
+
+.relatedList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.relatedLink {
+  display: block;
+  padding: 0.9rem;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--code-bg) 70%, transparent);
+  border: 1px solid var(--nav-border-color);
+  text-decoration: none;
+  color: inherit;
+}
+
+.relatedLink:hover {
+  border-color: color-mix(in srgb, var(--accent-2) 35%, var(--nav-border-color));
+  transform: translateY(-1px);
+}
+
+.relatedTitle {
+  font-weight: 650;
+  color: var(--foreground-strong);
+  margin-bottom: 0.25rem;
+}
+
+.relatedSummary {
+  font-size: 0.95rem;
+  opacity: 0.85;
 }
 
 /* Optional narrower card titles on very small screens */

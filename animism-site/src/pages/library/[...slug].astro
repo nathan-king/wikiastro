@@ -21,12 +21,67 @@ if (!page) {
 }
 
 const html = page.rendered?.html;
+
+function slugify(value) {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+const category = page.data.category || "Uncategorised";
+const categoryId = `category-${slugify(category)}`;
+
+const manualRelatedSlugs = page.data.related ?? [];
+const manualRelated = manualRelatedSlugs
+  .map((relatedSlug) => allPages.find((p) => p.slug === relatedSlug))
+  .filter(Boolean);
+
+const autoRelated = allPages
+  .filter((p) => p.slug !== page.slug && (p.data.category || "Uncategorised") === category)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .slice(0, 5);
+
+const related = manualRelated.length ? manualRelated : autoRelated;
 ---
 
 <WikiLayout posts={allPages}>
   <div class={styles.article}>
+    <nav class={styles.breadcrumbs} aria-label="Breadcrumb">
+      <a href="/library">Library</a>
+      <span class={styles.crumbSep} aria-hidden="true">/</span>
+      <a href={`/library#${categoryId}`}>{category}</a>
+      <span class={styles.crumbSep} aria-hidden="true">/</span>
+      <span class={styles.crumbCurrent} aria-current="page">{page.data.title}</span>
+    </nav>
+
+    <div class={styles.pageMeta}>
+      <span class={styles.badge}>{category}</span>
+    </div>
+
     <h1>{page.data.title}</h1>
     <article set:html={html} />
+
+    {related.length > 0 && (
+      <section class={styles.related}>
+        <h2>Related</h2>
+        <ul class={styles.relatedList}>
+          {related.map((entry) => (
+            <li>
+              <a class={styles.relatedLink} href={`/library/${entry.slug}`}>
+                <div class={styles.relatedTitle}>{entry.data.title}</div>
+                {entry.data.summary && (
+                  <div class={styles.relatedSummary}>{entry.data.summary}</div>
+                )}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
     <hr />
     <div>
       <p>Return to <a href="/library">library home.</a></p>

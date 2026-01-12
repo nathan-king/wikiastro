@@ -5,6 +5,7 @@ import styles from "./PageLayout.module.css";
 import "../../styles/global.css";
 
 const { noLayout = false } = Astro.props;
+const year = new Date().getFullYear();
 
 const flatPages = await getCollection("pages");
 const filteredPages = flatPages.filter((p) => {
@@ -114,5 +115,19 @@ const pages = nestPages(filteredPages);
         <slot />
       </article>
     </main>
+
+    <footer class={styles.footer}>
+      <div class={styles.footerInner}>
+        <div class={styles.footerLeft}>
+          <span class={styles.footerBrand}>Wiki</span>
+          <span class={styles.footerMuted}>© {year}</span>
+        </div>
+        <nav aria-label="Footer" class={styles.footerLinks}>
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/library">Library</a>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>

@@ -8,6 +8,7 @@ export default function WikiSidebar({ entries }) {
   const [openCategories, setOpenCategories] = useState({});
   const [showDropdown, setShowDropdown] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeSlug, setActiveSlug] = useState(null);
 
   const sidebarRef = useRef(null);
   const toggleRef = useRef(null);
@@ -32,6 +33,20 @@ export default function WikiSidebar({ entries }) {
   const toggleCategory = category => {
     setOpenCategories(prev => ({ ...prev, [category]: !prev[category] }));
   };
+
+  useEffect(() => {
+    const path = window.location.pathname || '';
+    const match = path.match(/^\/library\/([^/]+)(?:\/|$)/);
+    if (!match) return;
+    const slug = match[1];
+    setActiveSlug(slug);
+
+    const activeEntry = entries.find((e) => e.slug === slug);
+    if (activeEntry) {
+      const category = activeEntry.data.category || 'Uncategorised';
+      setOpenCategories((prev) => ({ ...prev, [category]: true }));
+    }
+  }, [entries]);
 
   // close sidebar on outside click
   useEffect(() => {
@@ -116,7 +131,13 @@ export default function WikiSidebar({ entries }) {
               <ul className={styles.postList}>
                 {items.map(entry => (
                   <li key={entry.slug}>
-                    <a href={`/library/${entry.slug}`}>{entry.data.title}</a>
+                    <a
+                      href={`/library/${entry.slug}`}
+                      className={activeSlug === entry.slug ? styles.activeLink : undefined}
+                      aria-current={activeSlug === entry.slug ? 'page' : undefined}
+                    >
+                      {entry.data.title}
+                    </a>
                   </li>
                 ))}
               </ul>

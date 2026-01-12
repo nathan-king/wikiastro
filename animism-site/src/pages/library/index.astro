@@ -6,6 +6,15 @@ import { getCollection } from 'astro:content';
 // Load all wiki entries
 const wikiEntries = await getCollection('wiki');
 
+function slugify(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
 // Group by category
 const grouped = {};
 for (const entry of wikiEntries) {
@@ -21,6 +30,13 @@ for (const cat in grouped) {
 
 // Sort categories alphabetically
 const sortedCategories = Object.keys(grouped).sort();
+
+const categoryDescriptions = {
+  Basics: 'Core conventions for writing and navigating the wiki.',
+  Structure: 'How content is organized and what each page type is for.',
+  Editing: 'Practical guidance for maintaining, revising, and classifying pages.',
+  Reference: 'Indexes and overview lists for quick navigation.',
+};
 ---
 
 <WikiLayout posts={wikiEntries}>
@@ -30,7 +46,13 @@ const sortedCategories = Object.keys(grouped).sort();
   <div class={styles.categoryGrid}>
     {sortedCategories.map(category => (
       <div class={styles.categoryCard}>
-        <h2>{category}</h2>
+        <div class={styles.categoryHeader}>
+          <h2 id={`category-${slugify(category)}`}>{category}</h2>
+          <span class={styles.categoryCount}>{grouped[category].length}</span>
+        </div>
+        {categoryDescriptions[category] && (
+          <p class={styles.categoryDescription}>{categoryDescriptions[category]}</p>
+        )}
         <ul>
           {grouped[category].map(entry => (
             <li>

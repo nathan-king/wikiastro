@@ -11,6 +11,24 @@ export default function Navbar({ pages }) {
   const [theme, toggleTheme] = useTheme();
   const navRef = useRef(null);
   const toggleRef = useRef(null);
+  const [currentPath, setCurrentPath] = useState('/');
+
+  useEffect(() => {
+    setCurrentPath(window.location.pathname || '/');
+  }, []);
+
+  function normalisePath(path) {
+    if (!path) return '/';
+    if (path === '/') return '/';
+    return path.endsWith('/') ? path.slice(0, -1) : path;
+  }
+
+  const isActive = (href) => {
+    const current = normalisePath(currentPath);
+    const target = normalisePath(href);
+    if (target === '/') return current === '/';
+    return current === target || current.startsWith(`${target}/`);
+  };
 
   const handleClickOutside = useCallback((e) => {
     if (
@@ -92,7 +110,8 @@ export default function Navbar({ pages }) {
                   href={`/${page.slug}`}
                   className={`${styles.navItem} ${
                     page.children?.length ? styles.hasChildren : ''
-                  }`}
+                  } ${isActive(`/${page.slug}`) ? styles.active : ''}`}
+                  aria-current={isActive(`/${page.slug}`) ? 'page' : undefined}
                 >
                   {page.title}
                 </a>
@@ -100,7 +119,11 @@ export default function Navbar({ pages }) {
                   <ul className={styles.dropdown}>
                     {sortedChildren.map(child => (
                       <li key={child.slug}>
-                        <a href={`/${child.slug}`} className={styles.navItem}>
+                        <a
+                          href={`/${child.slug}`}
+                          className={`${styles.navItem} ${isActive(`/${child.slug}`) ? styles.active : ''}`}
+                          aria-current={isActive(`/${child.slug}`) ? 'page' : undefined}
+                        >
                           {child.title}
                         </a>
                       </li>
@@ -112,7 +135,11 @@ export default function Navbar({ pages }) {
           })}
 
           <li className={styles.navItemWrapper}>
-            <a href="/library" className={styles.navItem}>
+            <a
+              href="/library"
+              className={`${styles.navItem} ${isActive('/library') ? styles.active : ''}`}
+              aria-current={isActive('/library') ? 'page' : undefined}
+            >
               The Library
             </a>
           </li>

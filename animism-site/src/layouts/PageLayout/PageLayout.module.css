@@ -122,3 +122,64 @@
       padding: 1.5rem 0;
     }
   }
+
+  .footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--nav-border-color);
+    background: color-mix(in srgb, var(--background) 92%, transparent);
+  }
+
+  .footerInner {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 1.25rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .footerLeft {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    min-width: 0;
+  }
+
+  .footerBrand {
+    font-weight: 700;
+    color: var(--foreground-strong);
+    letter-spacing: -0.02em;
+  }
+
+  .footerMuted {
+    opacity: 0.75;
+    font-size: 0.95rem;
+  }
+
+  .footerLinks {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .footerLinks a {
+    text-decoration: none;
+    color: var(--foreground);
+    font-size: 0.95rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 999px;
+  }
+
+  .footerLinks a:hover {
+    color: var(--foreground-strong);
+    background: color-mix(in srgb, var(--accent-2) 14%, transparent);
+  }
+
+  @media (max-width: 768px) {
+    .footerInner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
