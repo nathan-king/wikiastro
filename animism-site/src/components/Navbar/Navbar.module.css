@@ -93,8 +93,8 @@
   padding: .5rem .75rem;
   white-space: nowrap;
   transition: color .2s ease;
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
 }
 .navItem:hover {
   color: var(--link);
@@ -170,7 +170,7 @@ html[data-theme="dark"] .iconDark  { display: inline; }
   .navItem {
     width: 100%;               /* full‑width link area */
     text-align: center;        /* center link text */
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1rem 0;           /* vertical space */
   }
 }
